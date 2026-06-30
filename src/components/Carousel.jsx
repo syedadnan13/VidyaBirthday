@@ -12,11 +12,11 @@ export default function Carousel({ setMainImage, setQuote }) {
   const isDesktopOrLaptop = useMediaQuery({ query: "(min-width: 1224px)" });
   const isMobile = useMediaQuery({ query: "(max-width: 767px)" });
 
-  const cardWidthValue = isBigScreen ? 240 : isDesktopOrLaptop ? 220 : 100;
+  const cardWidthValue = isBigScreen ? 210 : isDesktopOrLaptop ? 175 : 90;
   const cardWidth = `${cardWidthValue}px`;
   const cardTotalWidth = cardWidthValue + 16;
-  const cardHeight = isBigScreen ? "300px" : isDesktopOrLaptop ? "260px" : "150px";
-  const carouselWidth = isBigScreen ? "1000px" : isDesktopOrLaptop ? "900px" : "";
+  const cardHeight = isBigScreen ? "250px" : isDesktopOrLaptop ? "195px" : "130px";
+  const carouselWidth = isBigScreen ? "920px" : isDesktopOrLaptop ? "800px" : "";
 
   useEffect(() => {
     VanillaTilt.init(document.querySelectorAll("[data-tilt]"), {
@@ -67,12 +67,9 @@ export default function Carousel({ setMainImage, setQuote }) {
   return (
     <>
       <div
-        className={
-          `${isMobile ? "fixed bottom-0 left-0 w-full bg-white/10 backdrop-blur-md z-30" : "absolute bottom-8 left-0 md:left-16 w-full md:w-auto max-w-[96%] md:max-w-6xl px-4 md:px-0 z-20"}`
-        }
-        style={isMobile ? { boxShadow: "0 -2px 16px 0 rgba(255,192,203,0.2)" } : {}}
+        className="relative w-full z-20 bg-white/10 backdrop-blur-md shadow-[0_-2px_20px_0_rgba(255,192,203,0.3)] border-t border-white/20"
       >
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden max-w-5xl mx-auto px-4">
           <div
             ref={carouselRef}
             className="flex gap-4 py-4 scrollbar-hide"

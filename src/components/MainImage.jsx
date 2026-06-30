@@ -18,37 +18,42 @@ export default function MainImage({ src }) {
     });
   }, []);
 
-  // ✅ Responsive sizing logic
-  let maxWidth = "clamp(250px, 40vw, 400px)";
+  // ✅ Responsive sizing logic — constrained to parent height so it never overflows
+  let maxWidth = "clamp(180px, 26vw, 300px)";
+  let maxHeight = "55vh";
   let aspectRatio = "4 / 5";
 
   if (isBigScreen) {
-    maxWidth = "clamp(300px, 30vw, 450px)";
+    maxWidth = "clamp(260px, 24vw, 360px)";
+    maxHeight = "65vh";
     aspectRatio = "4 / 5";
   }
 
   if (isPortrait && isTabletOrMobile) {
-    maxWidth = "clamp(240px, 50vw, 320px)";
-    aspectRatio = "3 / 5";
+    maxWidth = "clamp(160px, 38vw, 220px)";
+    maxHeight = "30vh";
+    aspectRatio = "3 / 4";
   }
 
   return (
-    <div className="flex justify-center items-center w-full px-4 relative z-10">
+    <div className="flex justify-center items-center w-full h-full px-2 relative z-10">
       {/* Blur glow */}
-      <div className="absolute inset-0 rounded-full bg-white/30 blur-3xl scale-90"></div>
+      <div className="absolute inset-0 rounded-full bg-white/30 blur-3xl scale-90 pointer-events-none"></div>
 
       <div
         data-tilt
-        className="w-full relative"
+        className="relative"
         style={{
+          width: "100%",
           maxWidth,
+          maxHeight,
           aspectRatio,
         }}
       >
         <img
           src={src}
           alt="Main"
-          className="rounded-2xl object-cover w-full h-full shadow-2xl transition-all duration-1000"
+          className="rounded-2xl object-cover w-full h-full shadow-2xl transition-all duration-1000 block"
         />
         <div className="absolute inset-0 rounded-2xl shadow-[0_0_15px_5px_rgba(255,192,203,0.5)] animate-pulse-slow"></div>
       </div>

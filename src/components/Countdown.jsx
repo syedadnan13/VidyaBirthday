@@ -19,7 +19,7 @@ export default function Countdown() {
   const fireworksRef = useRef(null);
 
   useEffect(() => {
-    const targetDate = new Date("2025-07-17T00:00:00").getTime();
+    const targetDate = new Date("2026-07-17T00:00:00").getTime();
 
     const interval = setInterval(() => {
       const now = new Date().getTime();
@@ -31,8 +31,10 @@ export default function Countdown() {
         const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
         const seconds = Math.floor((distance % (1000 * 60)) / 1000);
         setTimeLeft({ days, hours, minutes, seconds });
-        if (days < 10 && days > 0) {
-          setDaysToGoText(`${days} day${days === 1 ? '' : 's'} to go!`);
+        if (days > 0) {
+          setDaysToGoText(`${days} day${days === 1 ? '' : 's'} to go! 🎂`);
+        } else if (days === 0) {
+          setDaysToGoText("Today's the day! 🎉");
         } else {
           setDaysToGoText("");
         }
@@ -87,17 +89,17 @@ export default function Countdown() {
 
   // Remove spinner, add animated linear line revolving around each countdown card
   return (
-    <div className="absolute top-6 left-1/2 transform -translate-x-1/2 z-30 text-center w-full max-w-full px-4">
+    <div className="relative z-30 text-center w-full px-4 pt-3 pb-1 flex-shrink-0">
       {/* Firecracker background GIF on celebration */}
       {/* Title */}
-      <div className="flex items-center justify-center gap-3 mb-4 whitespace-nowrap">
-        <i className="fa-solid fa-heart text-pink-500 text-xl animate-pulse"></i>
+      <div className="flex items-center justify-center gap-3 mb-2 whitespace-nowrap">
+        <i className="fa-solid fa-heart text-pink-500 text-lg animate-pulse"></i>
         <h2 className={`font-dancing text-pink-800 ${fontSize}`}>Birthday Countdown</h2>
-        <i className="fa-solid fa-heart text-pink-500 text-xl animate-pulse"></i>
+        <i className="fa-solid fa-heart text-pink-500 text-lg animate-pulse"></i>
       </div>
       {/* Days to go text */}
       {daysToGoText && !showCelebration && (
-        <div className="mb-2 animate-bounce text-pink-700 font-bold text-2xl font-dancing drop-shadow-lg">
+        <div className="mb-1 animate-bounce text-pink-700 font-bold text-lg md:text-xl font-dancing drop-shadow-lg">
           {daysToGoText}
         </div>
       )}
@@ -149,12 +151,20 @@ export default function Countdown() {
       </div>
       {/* Celebration effect */}
       {showCelebration && (
-        <div className="mt-6 animate-bounce font-dancing text-pink-600 drop-shadow-lg w-full flex items-center justify-center">
-          <span className="text-3xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl whitespace-nowrap flex items-center gap-3">
-            <span role="img" aria-label="party">🎉</span>
-            Happy Birthday!
-            <span role="img" aria-label="party">🎉</span>
-          </span>
+        <div className="mt-6 w-full flex flex-col items-center justify-center gap-3">
+          <div className="animate-bounce font-dancing text-pink-600 drop-shadow-lg">
+            <span className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl whitespace-nowrap flex items-center gap-3">
+              <span role="img" aria-label="party">🎉</span>
+              Happy Birthday, Vidya!
+              <span role="img" aria-label="party">🎉</span>
+            </span>
+          </div>
+          <div className="font-montserrat text-purple-700 text-base sm:text-lg md:text-xl animate-pulse-slow drop-shadow">
+            🎂 Wishing you the most magical day! ✨
+          </div>
+          <div className="flex gap-4 text-3xl animate-bounce" style={{animationDelay: '0.2s'}}>
+            <span>🌸</span><span>💜</span><span>🌟</span><span>💜</span><span>🌸</span>
+          </div>
         </div>
       )}
     </div>

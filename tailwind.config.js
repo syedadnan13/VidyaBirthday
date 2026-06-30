@@ -19,6 +19,9 @@ module.exports = {
         "fade-in": "fadeIn 2s ease-in forwards",
         typing: "typing 3.5s steps(40, end)",
         "blink-caret": "blink-caret .75s step-end infinite",
+        balloon: "balloon-float 5s ease-in-out infinite",
+        twinkle: "twinkle 2.2s ease-in-out infinite",
+        "glow-pulse": "glow-pulse 2s ease-in-out infinite",
       },
       keyframes: {
         float: {
@@ -40,6 +43,18 @@ module.exports = {
         "blink-caret": {
           "from, to": { borderColor: "transparent" },
           "50%": { borderColor: "white" },
+        },
+        "balloon-float": {
+          "0%, 100%": { transform: "translateY(0px) rotate(-4deg)" },
+          "50%": { transform: "translateY(-28px) rotate(4deg)" },
+        },
+        twinkle: {
+          "0%, 100%": { opacity: "0.15", transform: "scale(0.75)" },
+          "50%": { opacity: "1", transform: "scale(1.25)" },
+        },
+        "glow-pulse": {
+          "0%, 100%": { textShadow: "0 0 8px rgba(236,72,153,0.6)" },
+          "50%": { textShadow: "0 0 24px rgba(236,72,153,1), 0 0 48px rgba(167,139,250,0.8)" },
         },
       },
     },

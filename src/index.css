@@ -15,3 +15,37 @@
   scrollbar-width: none;
 }
 
+/* ── Animated gradient border on countdown cards ── */
+@keyframes pipe-gradient {
+  0% { background-position: 0% 50%; }
+  100% { background-position: 400% 50%; }
+}
+
+/* ── Balloon gentle sway ── */
+@keyframes balloon-float {
+  0%, 100% { transform: translateY(0px) rotate(-4deg); }
+  50%       { transform: translateY(-28px) rotate(4deg); }
+}
+
+/* ── Star / sparkle twinkle ── */
+@keyframes twinkle {
+  0%, 100% { opacity: 0.15; transform: scale(0.75); }
+  50%       { opacity: 1;    transform: scale(1.25); }
+}
+
+/* ── Confetti pieces drifting down (used via JS-injected elements) ── */
+@keyframes confetti-fall {
+  0%   { transform: translateY(-5vh) rotate(0deg);   opacity: 1; }
+  100% { transform: translateY(105vh) rotate(720deg); opacity: 0.2; }
+}
+
+/* ── Gentle pulse glow for the birthday banner ── */
+@keyframes glow-pulse {
+  0%, 100% { text-shadow: 0 0 8px rgba(236, 72, 153, 0.6); }
+  50%       { text-shadow: 0 0 24px rgba(236, 72, 153, 1), 0 0 48px rgba(167, 139, 250, 0.8); }
+}
+
+.animate-balloon  { animation: balloon-float 5s ease-in-out infinite; }
+.animate-twinkle  { animation: twinkle 2.2s ease-in-out infinite; }
+.animate-glow     { animation: glow-pulse 2s ease-in-out infinite; }
+
