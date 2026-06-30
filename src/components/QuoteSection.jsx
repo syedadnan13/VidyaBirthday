@@ -29,8 +29,15 @@ export default function QuoteSection({ quote }) {
   return (
     <div className={`w-full px-4 py-3 md:py-4 z-10 flex flex-col justify-center mt-0 ${alignment}`}>
       <h1
-        className="font-dancing text-4xl sm:text-5xl md:text-6xl text-pink-800 mb-2 animate-fade-in opacity-0"
-        style={{ animationDelay: "0.5s" }}
+        className="font-dancing text-4xl sm:text-5xl md:text-6xl mb-2"
+        style={{
+          background: "linear-gradient(135deg, #ec4899 0%, #8b5cf6 50%, #ec4899 100%)",
+          WebkitBackgroundClip: "text",
+          WebkitTextFillColor: "transparent",
+          backgroundClip: "text",
+          backgroundSize: "200% auto",
+          animation: "gradient-shift 4s ease infinite",
+        }}
       >
         Happy Birthday
       </h1>

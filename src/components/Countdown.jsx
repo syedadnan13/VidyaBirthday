@@ -94,7 +94,17 @@ export default function Countdown() {
       {/* Title */}
       <div className="flex items-center justify-center gap-3 mb-2 whitespace-nowrap">
         <i className="fa-solid fa-heart text-pink-500 text-lg animate-pulse"></i>
-        <h2 className={`font-dancing text-pink-800 ${fontSize}`}>Birthday Countdown</h2>
+        <h2
+          className={`font-dancing ${fontSize}`}
+          style={{
+            background: "linear-gradient(135deg, #be185d, #7c3aed, #0ea5e9)",
+            WebkitBackgroundClip: "text",
+            WebkitTextFillColor: "transparent",
+            backgroundClip: "text",
+          }}
+        >
+          Birthday Countdown
+        </h2>
         <i className="fa-solid fa-heart text-pink-500 text-lg animate-pulse"></i>
       </div>
       {/* Days to go text */}
@@ -108,7 +118,12 @@ export default function Countdown() {
         {Object.entries(timeLeft).map(([unit, value], idx) => (
           <div
             key={unit}
-            className={`bg-white/30 backdrop-blur-sm rounded-lg text-center ${boxSize} relative flex flex-col items-center justify-center overflow-visible`}
+            className={`backdrop-blur-md rounded-xl text-center ${boxSize} relative flex flex-col items-center justify-center overflow-visible`}
+            style={{
+              background: "rgba(10, 4, 45, 0.55)",
+              border: "1px solid rgba(255,255,255,0.1)",
+              boxShadow: "0 8px 32px rgba(0,0,0,0.28), inset 0 1px 0 rgba(255,255,255,0.07)",
+            }}
           >
             {/* Animated pipe border with traveling gradient */}
             <span className="absolute inset-0 pointer-events-none z-20 rounded-lg">
@@ -133,10 +148,13 @@ export default function Countdown() {
                 className="absolute -top-10 left-1/2 -translate-x-1/2 w-12 h-12 object-contain pointer-events-none select-none z-20"
               />
             )}
-            <div className={`font-playfair font-bold text-purple-900 ${fontSize} relative z-10`}>
+            <div
+              className={`font-playfair font-bold text-white ${fontSize} relative z-10`}
+              style={{ textShadow: "0 0 18px rgba(236,72,153,0.85)" }}
+            >
               {String(value).padStart(2, "0")}
             </div>
-            <div className={`font-montserrat text-purple-700 ${unitSize} relative z-10`}>
+            <div className={`font-montserrat text-pink-300 ${unitSize} relative z-10 tracking-wider`}>
               {unit.charAt(0).toUpperCase() + unit.slice(1)}
             </div>
           </div>
