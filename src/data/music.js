@@ -60,10 +60,9 @@ const BIRTHDAY_DATE = 17; // Set to 27 for tomorrow
 
 export function isBirthdayToday() {
   const today = new Date();
-  // Only return true if it is the birthday AND the time is after midnight (00:00)
   return (
     today.getMonth() === BIRTHDAY_MONTH &&
     today.getDate() === BIRTHDAY_DATE &&
-    today.getHours() >= 0 // after midnight
+    today.getHours() >= 0
   );
 }
