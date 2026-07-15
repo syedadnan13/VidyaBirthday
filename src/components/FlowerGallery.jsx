@@ -13,9 +13,25 @@ import img22 from "../assets/images/22.jpeg";
 import img25 from "../assets/images/25.jpeg";
 import img28 from "../assets/images/28.jpeg";
 import img31 from "../assets/images/31.jpeg";
+import img48 from "../assets/images/48.jpeg";
+import img49 from "../assets/images/49.jpeg";
+import img50 from "../assets/images/50.jpeg";
+import img51 from "../assets/images/51.jpeg";
+import img52 from "../assets/images/52.jpeg";
+import img53 from "../assets/images/53.jpeg";
+import img54 from "../assets/images/54.jpeg";
 
 // ─── Flower data — each flower has its own color palette ──────────────────────
 const FLOWERS = [
+  // ── New 7 — shown first, bralette pic leads ──
+  { src: img54, o1: "#93c5fd", o2: "#1e40af", i1: "#eff6ff", i2: "#bfdbfe", stamen: "#fbbf24", msg: "Blue lace. Black pants. Sand in her hair. Face to the sun. The sun blinked first." },
+  { src: img48, o1: "#bae6fd", o2: "#0c4a6e", i1: "#e0f2fe", i2: "#7dd3fc", stamen: "#fef08a", msg: "The sea looked at her. She looked back. One of them was impossibly beautiful. The sea just happened to be in the photo too." },
+  { src: img49, o1: "#fde8d8", o2: "#9a3412", i1: "#fff7ed", i2: "#fdba74", stamen: "#fef08a", msg: "The camera was already doing its best. You made it look effortless." },
+  { src: img50, o1: "#1e1b4b", o2: "#312e81", i1: "#e0e7ff", i2: "#a5b4fc", stamen: "#fbbf24", msg: "Black tank. Black jacket. Black pants. All black everything — and still the brightest thing anywhere." },
+  { src: img51, o1: "#bfdbfe", o2: "#1d4ed8", i1: "#eff6ff", i2: "#93c5fd", stamen: "#fde68a", msg: "That dress called. It said thank you for doing it justice." },
+  { src: img52, o1: "#fde68a", o2: "#92400e", i1: "#fffbeb", i2: "#fcd34d", stamen: "#f97316", msg: "Golden hour. Black saree. White flower. Poetry tried to describe this. Gave up." },
+  { src: img53, o1: "#bae6fd", o2: "#0369a1", i1: "#e0f2fe", i2: "#7dd3fc", stamen: "#fef08a", msg: "Sat at the shore and looked out at the sea. The waves kept coming back. Can't blame them." },
+  // ── Original 12 ──
   { src: img1,  o1: "#ffd6e7", o2: "#f43f5e", i1: "#fff0f5", i2: "#fda4af", stamen: "#fbbf24", msg: "Some flowers only bloom once a year. Lucky for us — so do you." },
   { src: img4,  o1: "#e9d5ff", o2: "#7c3aed", i1: "#f5f3ff", i2: "#c4b5fd", stamen: "#fde68a", msg: "The book had no competition. Neither did the view." },
   { src: img6,  o1: "#bbf7d0", o2: "#059669", i1: "#ecfdf5", i2: "#6ee7b7", stamen: "#fef08a", msg: "That smile costs nothing and fixes absolutely everything." },

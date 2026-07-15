@@ -14,11 +14,83 @@ import img22 from "../assets/images/22.jpeg";
 import img25 from "../assets/images/25.jpeg";
 import img28 from "../assets/images/28.jpeg";
 import img31 from "../assets/images/31.jpeg";
+import img48 from "../assets/images/48.jpeg";
+import img49 from "../assets/images/49.jpeg";
+import img50 from "../assets/images/50.jpeg";
+import img51 from "../assets/images/51.jpeg";
+import img52 from "../assets/images/52.jpeg";
+import img53 from "../assets/images/53.jpeg";
+import img54 from "../assets/images/54.jpeg";
 
 // ── Chapter data ──────────────────────────────────────────────────────────
 const CHAPTERS = [
+  // ── New 7 — shown first, bralette pic leads ──
   {
     chapter: "Chapter I",
+    date: "Sandy beach, blue lace, open sky",
+    title: "The Sun Lost",
+    caption: "Blue lace bralette. Black pants. Sand in her hair. Head back, eyes closed, face turned to the sun — and I genuinely cannot tell which one is brighter. I think I know.",
+    src: img54,
+    accent: "#818cf8",
+    tag: "Untouchable",
+  },
+  {
+    chapter: "Chapter II",
+    date: "Shore of the sea, sitting still",
+    title: "The Sea & The Beauty",
+    caption: "She sat at the edge of the shore, hands resting on her legs, and looked out at the sea. The sea looked back. Between the two of them, only one was truly breathtaking. The water knew it.",
+    src: img48,
+    accent: "#38bdf8",
+    tag: "Shore Stare",
+  },
+  {
+    chapter: "Chapter III",
+    date: "Somewhere between stunning and unfair",
+    title: "Tried to Look Away",
+    caption: "I tried to find a polite way to describe this photo. There isn't one. Every attempt becomes a compliment and every compliment falls short. Moving on.",
+    src: img49,
+    accent: "#f97316",
+    tag: "No Words",
+  },
+  {
+    chapter: "Chapter IV",
+    date: "All black, all presence",
+    title: "Dressed in Midnight",
+    caption: "Black tank top. Black jacket. Black pants. No colour, no flash, no fuss. Just her dressed in midnight — and somehow still the only thing worth looking at.",
+    src: img50,
+    accent: "#818cf8",
+    tag: "All Black",
+  },
+  {
+    chapter: "Chapter V",
+    date: "Mirror selfie, blue ruched dress",
+    title: "The Dress Owes You",
+    caption: "You looked down at the mirror while the mirror was looking up at you thinking — I am so incredibly lucky right now. The dress thought the same thing. So did everyone.",
+    src: img51,
+    accent: "#60a5fa",
+    tag: "That Dress",
+  },
+  {
+    chapter: "Chapter VI",
+    date: "Golden hour, black sheer saree",
+    title: "Poetry Gave Up",
+    caption: "Poets have been trying for centuries to write lines that look like this photo feels. Black sheer saree. Golden light. White jasmine in the hair. They're still working on it.",
+    src: img52,
+    accent: "#fbbf24",
+    tag: "Poetry",
+  },
+  {
+    chapter: "Chapter VII",
+    date: "Beach at sunset, sitting in the waves",
+    title: "The Sea Stayed",
+    caption: "She sat in the ocean at golden hour, striped shirt, denim shorts, and looked away like the horizon owed her something. The waves came and went. She stayed unbothered.",
+    src: img53,
+    accent: "#38bdf8",
+    tag: "Unbothered",
+  },
+  // ── Original 12 ──
+  {
+    chapter: "Chapter VIII",
     date: "The very beginning",
     title: "Lucky Camera",
     caption: "Somewhere, a camera took the best photo of its life and never knew it. Lucky camera.",
@@ -27,7 +99,7 @@ const CHAPTERS = [
     tag: "Origin Story",
   },
   {
-    chapter: "Chapter II",
+    chapter: "Chapter IX",
     date: "Golden afternoons",
     title: "Not the Lighting",
     caption: "The golden hour showed up, looked around, and said 'nah, she's doing it for me today.' Correct assessment.",
@@ -36,7 +108,7 @@ const CHAPTERS = [
     tag: "Caught",
   },
   {
-    chapter: "Chapter III",
+    chapter: "Chapter X",
     date: "Laughing until it hurt",
     title: "Worth Every Word",
     caption: "I would say something stupid on purpose every single day just to be the reason for that laugh. Completely worth it. No regrets.",
@@ -45,7 +117,7 @@ const CHAPTERS = [
     tag: "Guilty",
   },
   {
-    chapter: "Chapter IV",
+    chapter: "Chapter XI",
     date: "Festival season",
     title: "Best Supporting Cast",
     caption: "Whole festival. Thousands of lights. Every decoration they had. All of them clocked in that day just to be your background. Respect.",
@@ -54,7 +126,7 @@ const CHAPTERS = [
     tag: "Main Character",
   },
   {
-    chapter: "Chapter V",
+    chapter: "Chapter XII",
     date: "That one quiet moment",
     title: "Evidence: Exhibit A",
     caption: "That smile belongs in an evidence locker. It's why I can't stay mad for more than thirty seconds. Genuinely not fair. I want a lawyer.",
@@ -63,7 +135,7 @@ const CHAPTERS = [
     tag: "Unfair",
   },
   {
-    chapter: "Chapter VI",
+    chapter: "Chapter XIII",
     date: "Goa — red dress, bare feet",
     title: "Wrong Occasion, Wrong Intentions",
     caption: "Red dress. Bare feet. Wind. The ocean behind you. Every guy on that beach claimed they were 'watching the sunset.' Their cameras say otherwise.",
@@ -72,7 +144,7 @@ const CHAPTERS = [
     tag: "Dangerous",
   },
   {
-    chapter: "Chapter VII",
+    chapter: "Chapter XIV",
     date: "Tuesday, 11am, office bathroom",
     title: "HR Has Concerns",
     caption: "HR called. Apparently looking this good on a random Tuesday is a workplace distraction. They asked you to stop. Respectfully, don't.",
@@ -81,7 +153,7 @@ const CHAPTERS = [
     tag: "Violation",
   },
   {
-    chapter: "Chapter VIII",
+    chapter: "Chapter XV",
     date: "Dog filter era",
     title: "Broke the Algorithm",
     caption: "You put on a dog filter and somehow became MORE attractive. That's not what that filter is for. You broke the system. I'm not complaining.",
@@ -90,7 +162,7 @@ const CHAPTERS = [
     tag: "Illegal",
   },
   {
-    chapter: "Chapter IX",
+    chapter: "Chapter XVI",
     date: "That café, those Edison bulbs",
     title: "Should Be on the Menu",
     caption: "That café spent months on ambiance — Edison bulbs, plants, golden light. You walked in, laughed once, and became the whole aesthetic. They should put you on the menu.",
@@ -99,7 +171,7 @@ const CHAPTERS = [
     tag: "Hazardous",
   },
   {
-    chapter: "Chapter X",
+    chapter: "Chapter XVII",
     date: "Blue kurta, office bathroom again",
     title: "She Runs the Place",
     caption: "Two office bathroom selfies on this scroll. Both are effortlessly fire. Your ID badge says 'employee.' Your entire energy says 'I run this place and everyone already knows it.'",
@@ -108,7 +180,7 @@ const CHAPTERS = [
     tag: "Power Move",
   },
   {
-    chapter: "Chapter XI",
+    chapter: "Chapter XVIII",
     date: "Somewhere foggy and cold",
     title: "Upstaged the Mountain",
     caption: "The mountain pulled out fog, dramatic hills, moody sky — full cinematic production. Then you smiled. All that effort, completely wasted. The mountain understood.",
@@ -117,7 +189,7 @@ const CHAPTERS = [
     tag: "Scene Stealer",
   },
   {
-    chapter: "Chapter XII",
+    chapter: "Chapter XIX",
     date: "July 17, 2026",
     title: "The Chef Knew 🍽️",
     caption: "That cartoon chef has been holding that tray for years, waiting for something worthy to present. He finally found it. So did everyone else. Happy Birthday, Vidya.",

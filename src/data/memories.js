@@ -12,6 +12,13 @@ import img22 from "../assets/images/22.jpeg";
 import img25 from "../assets/images/25.jpeg";
 import img28 from "../assets/images/28.jpeg";
 import img31 from "../assets/images/31.jpeg";
+import img48 from "../assets/images/48.jpeg";
+import img49 from "../assets/images/49.jpeg";
+import img50 from "../assets/images/50.jpeg";
+import img51 from "../assets/images/51.jpeg";
+import img52 from "../assets/images/52.jpeg";
+import img53 from "../assets/images/53.jpeg";
+import img54 from "../assets/images/54.jpeg";
 
 export const memories = [
   {
@@ -130,5 +137,68 @@ export const memories = [
     color: "#f0fdf4",
     accent: "#10b981",
     tag: "Serene",
+  },
+  {
+    date: "Shore of the sea, sitting still",
+    title: "The Sea & The Beauty 🌊",
+    note: "She sat at the edge of the shore, hands resting on her legs, and looked out at the sea. The sea looked back. Between the two of them, only one was truly breathtaking. The water knew it.",
+    src: img48,
+    color: "#e0f2fe",
+    accent: "#0369a1",
+    tag: "Shore Stare",
+  },
+  {
+    date: "Between stunning and indescribable",
+    title: "No Filter Needed ✨",
+    note: "There are photos where the camera does all the work. And then there's this — where the camera just showed up and tried to keep up. It did its best. You did the rest.",
+    src: img49,
+    color: "#fff7ed",
+    accent: "#ea580c",
+    tag: "Effortless",
+  },
+  {
+    date: "All black, all presence",
+    title: "Dressed in Midnight 🖤",
+    note: "Black tank top. Black jacket. Black pants. No colour, no flash, no fuss. Just her dressed in midnight — effortlessly the most striking thing in any frame she steps into.",
+    src: img50,
+    color: "#e0e7ff",
+    accent: "#4338ca",
+    tag: "All Black",
+  },
+  {
+    date: "Mirror selfie in that blue dress",
+    title: "That Dress, That Look 💙",
+    note: "Blue ruched mini, eyes down, unbothered. The mirror has seen a lot. Nothing prepared it for this. It is doing its absolute best and it knows it's still losing.",
+    src: img51,
+    color: "#eff6ff",
+    accent: "#1d4ed8",
+    tag: "That Dress",
+  },
+  {
+    date: "Golden hour photoshoot — black sheer saree",
+    title: "Golden & Untouchable 🌅",
+    note: "Black sheer saree. White jasmine in your hair. Golden light on your face as you smile at something off-camera. Whatever it was, it was lucky to make you smile like that.",
+    src: img52,
+    color: "#fffbeb",
+    accent: "#b45309",
+    tag: "Saree Goals",
+  },
+  {
+    date: "Beach sunset — sitting in the waves",
+    title: "The Ocean Respected It 🌊",
+    note: "Striped shirt. Denim shorts. Sitting in the waves at golden hour, looking sideways like you've got nowhere better to be and the whole ocean agrees. Iconic.",
+    src: img53,
+    color: "#e0f2fe",
+    accent: "#0369a1",
+    tag: "Beach Vibes",
+  },
+  {
+    date: "Sandy beach — blue lace, open sky",
+    title: "Sun vs. You: No Contest ☀️",
+    note: "Blue lace bralette, black pants, sitting back in the sand with your face turned to the sun, eyes closed. The sun was doing its best. It had competition that day.",
+    src: img54,
+    color: "#eef2ff",
+    accent: "#4338ca",
+    tag: "Untouchable",
   },
 ];
