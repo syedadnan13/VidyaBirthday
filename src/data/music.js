@@ -69,10 +69,13 @@ const BIRTHDAY_MONTH = 6; // June
 const BIRTHDAY_DATE = 17; // Set to 27 for tomorrow
 
 export function isBirthdayToday() {
-  const today = new Date();
+  // Always check against India Standard Time (UTC+5:30)
+  // so midnight IST on July 17 triggers regardless of device timezone
+  const nowIST = new Date(
+    new Date().toLocaleString("en-US", { timeZone: "Asia/Kolkata" })
+  );
   return (
-    today.getMonth() === BIRTHDAY_MONTH &&
-    today.getDate() === BIRTHDAY_DATE &&
-    today.getHours() >= 0
+    nowIST.getMonth() === BIRTHDAY_MONTH &&
+    nowIST.getDate() === BIRTHDAY_DATE
   );
 }
